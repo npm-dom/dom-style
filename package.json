@@ -1,0 +1,27 @@
+{
+  "name": "style-dom",
+  "version": "0.0.0",
+  "description": "Library to manipulate CSS via DOM",
+  "main": "index.js",
+  "scripts": {
+    "test": "fox"
+  },
+  "dependencies": {
+    "to-camel-case": "*"
+  },
+  "devDependencies": {
+    "fox": "*",
+    "select-dom": "*"
+  },
+  "keywords": [
+    "dom",
+    "css",
+    "style"
+  ],
+  "repository": {
+    "url": "git@github.com:azer\/style-dom.git",
+    "type": "git"
+  },
+  "author": "Azer Ko\u00e7ulu <azer@kodfabrik.com>",
+  "license": "BSD"
+}
