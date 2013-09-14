@@ -1,6 +1,6 @@
 ## style-dom
 
-Library to manipulate CSS via DOM
+Library to manipulate CSS properties
 
 ```js
 style = require('style-dom')
