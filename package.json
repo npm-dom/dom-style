@@ -1,6 +1,6 @@
 {
   "name": "dom-style",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Inline CSS manipulation library",
   "main": "index.js",
   "scripts": {
