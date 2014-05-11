@@ -1,29 +1,35 @@
+var test = require('prova');
 var style = require("./");
 var select = require("select-dom");
 var el;
 
-before(function(done){
-  document.body.innerHTML = '<button>hello</button>';
-  el = select('button');
-  done();
-});
+test('hides and shows', function (t) {
+  reset();
+  t.plan(2);
 
-it('hides and shows', function(){
   style.hide(el);
-  expect(el.style.display).to.equal('none');
+  t.equal(el.style.display, 'none');
   style.show(el);
-  expect(el.style.display).to.equal('');
+  t.equal(el.style.display, '');
 });
 
-it('sets a css property', function(){
+test('sets a css property', function (t) {
+  reset();
+  t.plan(3);
+
   style(el, 'color', 'red');
-  expect(el.style.color).to.equal('red');
+  t.equal(el.style.color, 'red');
 
   style(el, {
     background: 'yellow',
     margin: '20px'
   });
 
-  expect(el.style.background).to.equal('yellow');
-  expect(el.style.margin).to.equal('20px');
+  t.equal(el.style.background, 'yellow');
+  t.equal(el.style.margin, '20px');
 });
+
+function reset (){
+  document.body.innerHTML = '<button>hello</button>';
+  el = select('button');
+};

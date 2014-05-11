@@ -1,27 +1,28 @@
 {
-  "name": "style-dom",
+  "name": "dom-style",
   "version": "0.0.0",
-  "description": "Library to manipulate CSS via DOM",
+  "description": "Inline CSS manipulation library",
   "main": "index.js",
   "scripts": {
-    "test": "fox"
+    "test": "node test -b"
   },
   "dependencies": {
     "to-camel-case": "*"
   },
   "devDependencies": {
-    "fox": "*",
+    "prova": "*",
     "select-dom": "*"
   },
   "keywords": [
     "dom",
     "css",
-    "style"
+    "style",
+    "browser"
   ],
   "repository": {
-    "url": "git@github.com:azer\/style-dom.git",
+    "url": "git@github.com:npm-dom/dom-style.git",
     "type": "git"
   },
-  "author": "Azer Ko\u00e7ulu <azer@kodfabrik.com>",
+  "author": "Azer Koçulu <azer@kodfabrik.com>",
   "license": "BSD"
 }

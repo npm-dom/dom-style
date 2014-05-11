@@ -1,9 +1,9 @@
-## style-dom
+## dom-style
 
-Library to manipulate CSS properties
+Inline CSS manipulation library
 
 ```js
-style = require('style-dom')
+var style = require('dom-style')
 
 style(document.body, 'background-color', 'red')
 
@@ -19,5 +19,5 @@ style.hide(document.body.children[1])
 ## Install
 
 ```bash
-$ npm install style-dom
+$ npm install dom-style
 ```
