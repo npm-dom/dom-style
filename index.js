@@ -2,7 +2,7 @@ var toCamelCase = require("to-camel-case");
 
 module.exports = style;
 module.exports.hide = effect('display', 'none');
-module.exports.show = effect('display', '');
+module.exports.show = effect('display', 'initial');
 
 function all(element, css){
   var name;
