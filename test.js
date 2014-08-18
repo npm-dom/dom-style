@@ -1,6 +1,6 @@
 var test = require('prova');
 var style = require("./");
-var select = require("select-dom");
+var select = require('select-dom');
 var el;
 
 test('hides and shows', function (t) {
@@ -10,7 +10,7 @@ test('hides and shows', function (t) {
   style.hide(el);
   t.equal(el.style.display, 'none');
   style.show(el);
-  t.equal(el.style.display, '');
+  t.equal(el.style.display, 'initial');
 });
 
 test('sets a css property', function (t) {
@@ -32,4 +32,4 @@ test('sets a css property', function (t) {
 function reset (){
   document.body.innerHTML = '<button>hello</button>';
   el = select('button');
-};
+}
