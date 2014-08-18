@@ -21,15 +21,15 @@ test('sets a css property', function (t) {
   t.equal(el.style.color, 'red');
 
   style(el, {
-    background: 'yellow',
+    'background-color': 'yellow',
     margin: '20px'
   });
 
-  t.equal(el.style.background, 'yellow');
+  t.equal(el.style.backgroundColor, 'yellow');
   t.equal(el.style.margin, '20px');
 });
 
-function reset (){
+function reset() {
   document.body.innerHTML = '<button>hello</button>';
   el = select('button');
 }
