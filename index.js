@@ -1,28 +1,28 @@
-var toCamelCase = require("to-camel-case");
+var toCamelCase = require('to-camel-case');
 
 module.exports = style;
 module.exports.hide = effect('display', 'none');
 module.exports.show = effect('display', 'initial');
 
-function all(element, css){
+function all(element, css) {
   var name;
   for ( name in css ) {
     one(element, name, css[name]);
   }
 }
 
-function effect (name, value) {
+function effect(name, value) {
   return function (element, override) {
     style(element, name, arguments.length > 1 ? override : value);
   };
 }
 
-function one(element, name, value){
-  element.style[toCamelCase(name)] = value;
+function one(element, name, value) {
+  element.style[toCamelCase((name == 'float') ? 'cssFloat' : name)] = value;
 }
 
-function style(element){
-  if ( arguments.length == 3 ) {
+function style(element) {
+  if (arguments.length == 3) {
     return one(element, arguments[1], arguments[2]);
   }
 
