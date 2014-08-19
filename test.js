@@ -1,6 +1,6 @@
 var test = require('prova');
 var style = require("./");
-var select = require("select-dom");
+var select = require('select-dom');
 var el;
 
 test('hides and shows', function (t) {
@@ -10,26 +10,31 @@ test('hides and shows', function (t) {
   style.hide(el);
   t.equal(el.style.display, 'none');
   style.show(el);
-  t.equal(el.style.display, '');
+  t.equal(el.style.display, 'initial');
 });
 
 test('sets a css property', function (t) {
   reset();
-  t.plan(3);
+  t.plan(5);
 
   style(el, 'color', 'red');
   t.equal(el.style.color, 'red');
 
+  style(el, 'float', 'left');
+  t.equal(el.style.cssFloat, 'left');
+
   style(el, {
-    background: 'yellow',
+    'background-color': 'yellow',
+    'float': 'left',
     margin: '20px'
   });
 
-  t.equal(el.style.background, 'yellow');
+  t.equal(el.style.backgroundColor, 'yellow');
+  t.equal(el.style.cssFloat, 'left');
   t.equal(el.style.margin, '20px');
 });
 
-function reset (){
+function reset() {
   document.body.innerHTML = '<button>hello</button>';
   el = select('button');
-};
+}
