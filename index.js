@@ -1,20 +1,12 @@
 var toCamelCase = require('to-camel-case');
 
 module.exports = style;
-module.exports.hide = effect('display', 'none');
-module.exports.show = effect('display', 'initial');
 
 function all(element, css) {
   var name;
   for ( name in css ) {
     one(element, name, css[name]);
   }
-}
-
-function effect(name, value) {
-  return function (element, override) {
-    style(element, name, arguments.length > 1 ? override : value);
-  };
 }
 
 function one(element, name, value) {
