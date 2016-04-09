@@ -4,14 +4,16 @@
   "description": "Inline CSS manipulation library",
   "main": "index.js",
   "scripts": {
-    "test": "node test -b"
+    "test": "browserify test.js | tape-run"
   },
   "dependencies": {
     "to-camel-case": "*"
   },
   "devDependencies": {
-    "prova": "*",
-    "select-dom": "*"
+    "browserify": "13.0.0",
+    "select-dom": "*",
+    "tape": "4.5.1",
+    "tape-run": "2.1.3"
   },
   "keywords": [
     "dom",

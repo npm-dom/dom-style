@@ -1,17 +1,7 @@
-var test = require('prova');
+var test = require('tape');
 var style = require("./");
 var select = require('select-dom');
 var el;
-
-test('hides and shows', function (t) {
-  reset();
-  t.plan(2);
-
-  style.hide(el);
-  t.equal(el.style.display, 'none');
-  style.show(el);
-  t.equal(el.style.display, 'initial');
-});
 
 test('sets a css property', function (t) {
   reset();

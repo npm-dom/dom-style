@@ -12,8 +12,6 @@ style(document.body, {
   'border': '5px solid black'
 })
 
-style.show(document.body.children[0])
-style.hide(document.body.children[1])
 ```
 
 ## Install
